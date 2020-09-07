@@ -1,9 +1,9 @@
 import React, { Fragment, useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { switchPage } from "../../actions/app_data";
-import { Button, TextField } from "@shopify/polaris";
+import { Button, TextField, Icon, Layout } from "@shopify/polaris";
 import SettingAdjust from "../Setting Adjust/SettingAdjust";
-import { Input } from "@material-ui/core";
+import { MobileBackArrowMajorMonotone } from "@shopify/polaris-icons";
 
 export default function CreateWidget() {
   const [value, setValue] = useState("");
@@ -20,32 +20,36 @@ export default function CreateWidget() {
   const dispatch = useDispatch();
 
   return (
-    <Fragment>
-      <Button
+    <div className="WidgetPage">
+      <p
         variant="contained"
         color="primary"
         onClick={() => dispatch(switchPage(1))}
       >
-        Back to list
-      </Button>
-      <div>Creat eWidget</div>
-      <p>Configure and save your widget. And then install it.</p>
+        <Button plain icon={MobileBackArrowMajorMonotone}>
+          Back to list
+        </Button>
+      </p>
+      <p className="WidgetPage__Head">Create Widget</p>
+      <p className="WidgetPage__Intro">
+        Configure and save your widget. And then install it.
+      </p>
       <hr></hr>
-      <div>
-        <TextField
-          label="Store name"
-          value={textFieldValue}
-          onChange={handleTextFieldChange}
-          clearButton
-          onClearButtonClick={handleClearButtonClick}
-        />
-        <p>
-          Name your widget. The name will be displayed only in your admin panel.
-        </p>
-      </div>
+      <span>Widget name</span>
+      <TextField
+        value={textFieldValue}
+        onChange={handleTextFieldChange}
+        clearButton
+        onClearButtonClick={handleClearButtonClick}
+      />
+      <span>
+        Name your widget. The name will be displayed only in your admin panel.
+      </span>
+
+      <div></div>
       <hr></hr>
       <h1>Adjust settings</h1>
       <SettingAdjust></SettingAdjust>
-    </Fragment>
+    </div>
   );
 }
