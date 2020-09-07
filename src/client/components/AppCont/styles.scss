@@ -1,0 +1,61 @@
+body {
+  background: #f4f6f8;
+}
+
+.app-container {
+  background: #f4f6f8;
+}
+
+.App-Main-Content {
+  margin: 55px;
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0px 0px 5px #00000033;
+  border-radius: 5px;
+
+  .setting {
+    .setting__cookie {
+      background-image: url(https://www.softzone.es/app/uploads-softzone.es/2019/12/Transparencia-PS.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+
+      .setting__style {
+        background-color: rgb(3, 26, 78);
+        color: white;
+      }
+    }
+  }
+
+  .App-Heading {
+    margin: 15px 0;
+
+    > h1 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .App-Body {
+    .Polaris-Stack {
+      .Polaris-Stack__Item:first-child {
+        flex: 0 1 20%;
+      }
+
+      .Polaris-Card {
+        padding: 15px;
+
+        .Polaris-Heading {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-action {
+    padding-top: 20px;
+    text-align: right;
+  }
+}
