@@ -35,20 +35,22 @@ export default function CreateWidget() {
         Configure and save your widget. And then install it.
       </p>
       <hr></hr>
-      <span>Widget name</span>
-      <TextField
+      <div className="WidgetNameArea">
+        <span className="WidgetNameArea__Name">Widget name</span>
+        <input className="WidgetNameArea__Input"></input>
+        <p className="WidgetNameArea__Intro">
+          Name your widget. The name will be displayed only in your admin panel.
+        </p>
+      </div>
+      {/* <TextField
         value={textFieldValue}
         onChange={handleTextFieldChange}
         clearButton
         onClearButtonClick={handleClearButtonClick}
-      />
-      <span>
-        Name your widget. The name will be displayed only in your admin panel.
-      </span>
+      /> */}
 
-      <div></div>
       <hr></hr>
-      <h1>Adjust settings</h1>
+      <div className="WidgetNameArea__Name">Adjust settings</div>
       <SettingAdjust></SettingAdjust>
     </div>
   );

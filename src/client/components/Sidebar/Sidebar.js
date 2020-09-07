@@ -30,7 +30,7 @@ export default function SidebarLeft() {
   };
   return (
     <div className="setting__background">
-      <Sidebar
+      {/* <Sidebar
         sidebar={<RenderSideBarContent></RenderSideBarContent>}
         open={sidebarOpen}
         styles={{ sidebar: { background: "white" } }}
@@ -43,7 +43,7 @@ export default function SidebarLeft() {
           Open sidebar
         </Button>
         <SettingStylePage></SettingStylePage>
-      </Sidebar>
+      </Sidebar> */}
     </div>
   );
 }

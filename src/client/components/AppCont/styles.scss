@@ -42,6 +42,13 @@ body {
   }
 
   .WidgetPage {
+    .WidgetNameArea__Name {
+      font-size: 1.5em;
+      color: #000000ba;
+      font-weight: 500;
+      margin: 30px 0px;
+    }
+
     .Polaris-Icon--isColored {
       color: #fff;
       display: inline-block;
@@ -57,7 +64,26 @@ body {
       color: gray;
     }
   }
-
+  .WidgetNameArea {
+    padding: 40px 0px;
+    .WidgetNameArea__Name {
+      font-size: 1.5em;
+      color: #000000ba;
+      font-weight: 500;
+      margin-right: 60px;
+    }
+    .WidgetNameArea__Input {
+      border: 1px solid #808080ad;
+      min-width: 300px;
+      height: 35px;
+      border-radius: 4px;
+    }
+    .WidgetNameArea__Intro {
+      font-size: 1.1em;
+      margin-top: 20px;
+      color: gray;
+    }
+  }
   .setting {
     .setting__cookie {
       background-image: url(https://www.softzone.es/app/uploads-softzone.es/2019/12/Transparencia-PS.jpg);
