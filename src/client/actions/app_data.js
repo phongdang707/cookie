@@ -23,3 +23,10 @@ export const switchPage = (page: number): AppDataAction => {
     page,
   };
 };
+export const changeStyleSelected = (name: string): AppDataAction => {
+  console.log("changeStyleSelected", name);
+  return {
+    type: "CHANGE_STYLE_SELECTED",
+    name,
+  };
+};

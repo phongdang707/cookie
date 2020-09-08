@@ -3,6 +3,7 @@ export const initState = {
     shop_plan: "",
     app_plan: "",
     page: 1,
+    name: "Top Banner",
   },
   app_settings: {
     wishlist_settings: {

@@ -23,6 +23,7 @@
     "async-busboy": "^0.7.0",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "classnames": "^2.2.6",
     "connect-pg-simple": "^5.0.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.0.0",

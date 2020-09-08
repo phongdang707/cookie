@@ -1,22 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Scrollable } from "@shopify/polaris";
+import { useSelector, useDispatch } from "react-redux";
+import { changeStyleSelected } from "../../actions/app_data";
+var classNames = require("classnames");
 
 export default function SidebarOption(props) {
-  const [background, setBackground] = useState("");
+  const name = useSelector((state) => state.app_data.name);
+  const dispatch = useDispatch();
+  console.log("name", name);
+  const [background, setBackground] = useState(props.data.classNameItem);
+  useEffect(() => {
+    if (name == props.data.item.name) {
+      setBackground(
+        classNames({ ItemOptionStyle: true }, { backgroundStyle: true })
+      );
+    } else {
+      setBackground(
+        classNames({ ItemOptionStyle: true }, { backgroundStyle: false })
+      );
+    }
+  }, [name]);
 
   return (
     <div
-      className="ItemOptionStyle"
-      style={{
-        backgroundColor: background,
-      }}
+      className={background}
       onClick={() => {
-        console.log("phong");
-        setBackground("linear-gradient(180deg, #ffa450 0%, #ff4177 100%)");
+        dispatch(changeStyleSelected(props.data.item.name));
       }}
     >
-      <img src={props.data.src} />
-      <p>{props.data.name}</p>
+      <img src={props.data.item.src} />
+      <p>{props.data.item.name}</p>
     </div>
   );
 }

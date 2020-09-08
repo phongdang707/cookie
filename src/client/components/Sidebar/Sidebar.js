@@ -6,6 +6,8 @@ import { Button, Icon, Scrollable } from "@shopify/polaris";
 import { SettingsMajorMonotone } from "@shopify/polaris-icons";
 import SidebarOption from "../SidebarOption/SidebarOption";
 
+var classNames = require("classnames");
+
 const arrStyle = [
   {
     src: "https://elfsight.com/assets/cookie-consent/templates/top-banner.jpg",
@@ -21,6 +23,11 @@ const arrStyle = [
     name: "Center Floating Box",
   },
 ];
+
+let classNameItem = classNames(
+  { ItemOptionStyle: true },
+  { backgroundStyle: false }
+);
 
 export default function SidebarLeft() {
   let initStyle = {
@@ -46,7 +53,7 @@ export default function SidebarLeft() {
   };
 
   const todoItems = arrStyle.map((item, index) => (
-    <SidebarOption data={item} key={index}></SidebarOption>
+    <SidebarOption data={{ item, classNameItem }} key={index}></SidebarOption>
   ));
 
   return (

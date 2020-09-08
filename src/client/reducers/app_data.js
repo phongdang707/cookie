@@ -21,6 +21,13 @@ const app_data = (state: AppData = {}, action: Action): AppData => {
         ...state,
         page: action.page,
       };
+    case "CHANGE_STYLE_SELECTED":
+      console.log("vao reducer");
+      console.log("actionáds", action);
+      return {
+        ...state,
+        name: action.name,
+      };
     default:
       return state;
   }
