@@ -1,0 +1,31 @@
+.top__banner.setting__style {
+  background-color: #031a4e;
+  color: white;
+  display: flex;
+  min-height: 60px;
+}
+.top__banner.icon-cookie svg {
+  display: block;
+  margin: auto;
+  height: 100%;
+  margin: 0px 2px 0px 56px;
+}
+.top__banner.setting__style__param {
+  font-size: 1em;
+  text-align: center;
+  justify-content: center;
+  /* line-height: 60px; */
+  text-align: left;
+  padding: 15px;
+}
+.top__banner.setting__style__ok {
+  width: 69px;
+  text-align: center;
+  height: 30px;
+  margin: auto 40px;
+  border-radius: 3px;
+  font-weight: 600;
+  line-height: 30px;
+  color: black;
+  background-color: #ffcd29;
+}
