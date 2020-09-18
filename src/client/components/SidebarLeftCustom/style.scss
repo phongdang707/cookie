@@ -1,0 +1,85 @@
+.sideBarLeft {
+  .Polaris-Card {
+    background: #38393a;
+    color: white;
+  }
+  .Polaris-Tabs__Tab--selected {
+    span.Polaris-Tabs__Title {
+      color: #ff6161;
+    }
+  }
+  .Polaris-Tabs {
+    border-bottom: 0.1rem solid #272121c2;
+  }
+  span.Polaris-Tabs__Title {
+    color: white;
+  }
+  .Polaris-Tabs__Tab.Polaris-Tabs__Tab--selected .Polaris-Tabs__Title {
+    border-bottom: 0.3rem solid #ff6161;
+  }
+
+  button#content:focus {
+    box-shadow: none;
+  }
+  button#layout {
+    box-shadow: none;
+  }
+  button#style {
+    box-shadow: none;
+  }
+  .Polaris-Tabs__Tab:hover .Polaris-Tabs__Title {
+    font-weight: unset;
+    color: unset;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  .content {
+    margin: 0px 15px;
+    margin-top: 15px;
+    .container {
+      background: #404141;
+      margin: 5px 0px;
+      width: calc(100% - 20px);
+      padding: 5px 20px;
+      .arrow-right {
+        float: right;
+        margin-top: 2px;
+      }
+    }
+
+    .small {
+      color: gray;
+    }
+    input[type="radio"]:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: #303131;
+      content: "";
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid #303131;
+    }
+
+    input[type="radio"]:checked:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: white;
+      content: "";
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid #303131;
+    }
+    input[type="radio"] {
+      float: right;
+      margin-top: 5px;
+    }
+  }
+}

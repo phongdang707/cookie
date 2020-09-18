@@ -1,0 +1,16 @@
+.message {
+  margin: 0px 20px;
+  .small {
+    color: gray;
+    margin-top: 25px;
+  }
+  .header {
+    padding: 22px 0px;
+    font-size: 1.8rem;
+  }
+  input {
+    width: 100%;
+    margin-top: 20px;
+    min-height: 130px;
+  }
+}

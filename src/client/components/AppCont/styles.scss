@@ -86,59 +86,67 @@ body {
     }
   }
   .setting {
-    .setting__cookie {
-      background-image: url(https://www.softzone.es/app/uploads-softzone.es/2019/12/Transparencia-PS.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-      .setting__background {
-        .ItemOptionStyle {
-          float: left;
-          width: 40%;
-          margin: 15px;
-          text-align: center;
-          padding: 2px;
-          border-radius: 3px;
+    background-image: url(https://www.softzone.es/app/uploads-softzone.es/2019/12/Transparencia-PS.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 749px;
 
-          img {
-            width: 100%;
-          }
-          p {
-            background: #212121;
-            padding: 15px 7px;
-            min-height: 75px;
-          }
-        }
-        .backgroundStyle {
-          background: linear-gradient(180deg, #ffa450 0%, #ff4177 100%);
-        }
-      }
-
-      .Polaris-Icon.Polaris-Icon--hasBackdrop {
-        margin: auto;
-        height: 100%;
-      }
-
-      #openNav {
-        position: absolute;
-        background-color: gray;
-        color: white;
-        width: 50px;
-        height: 60px;
-      }
-    }
-    #mySidebar {
-      background-color: #38393a;
-      color: white;
+    .sideBarLeft {
       float: left;
-      h1 {
-        font-size: 1.3em;
-        font-weight: 400;
+      width: 30%;
+      background-color: #38393a;
+      margin-bottom: 20px;
+      height: 100%;
+      .continue {
+        width: 100%;
+        float: left;
+        background: #404141;
+        padding: 20px;
+        .btn-continue {
+          color: white;
+          background-color: #fa4772;
+          width: 80%;
+          margin: auto;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+      .backgroundStyle {
+        background: linear-gradient(180deg, #ffa450 0%, #ff4177 100%);
+        padding: 2px;
+      }
+      .h1 {
+        font-size: 2rem;
+        color: white;
         text-align: center;
         padding: 25px 0px;
       }
+      .ItemOptionStyle {
+        width: 40%;
+        float: left;
+        margin-left: 6.5%;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+        }
+        p {
+          color: white;
+          text-align: center;
+          padding: 15px;
+          background: #252728;
+          min-height: 75px;
+        }
+      }
+    }
+    .sideBarRight {
+      float: right;
+      position: relative;
+      width: 70%;
+      height: 100%;
     }
   }
 }

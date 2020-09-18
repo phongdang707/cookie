@@ -1,31 +1,120 @@
-.top__banner.setting__style {
-  background-color: #031a4e;
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.top-banner {
   display: flex;
-  min-height: 60px;
-}
-.top__banner.icon-cookie svg {
-  display: block;
-  margin: auto;
-  height: 100%;
-  margin: 0px 2px 0px 56px;
-}
-.top__banner.setting__style__param {
-  font-size: 1em;
-  text-align: center;
   justify-content: center;
-  /* line-height: 60px; */
-  text-align: left;
-  padding: 15px;
+  background-color: rgb(3, 26, 78);
+  color: white;
+  padding: 20px 0px;
 }
-.top__banner.setting__style__ok {
-  width: 69px;
+
+.top-banner .btn-ok {
+  background-color: rgb(255, 205, 41);
+  color: rgb(29, 33, 41);
+  width: 60px;
   text-align: center;
-  height: 30px;
-  margin: auto 40px;
-  border-radius: 3px;
-  font-weight: 600;
-  line-height: 30px;
-  color: black;
-  background-color: #ffcd29;
+  padding: 5px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin: auto 5px;
+}
+
+.top-banner .content {
+  margin: auto 20px;
+  margin-right: 0px;
+  max-width: 450px;
+}
+.top-banner a.learn-more {
+  margin: auto 0px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-ok.ask {
+  background-color: white;
+  width: max-content;
+}
+
+.hidden {
+  display: none !important;
+}
+/* right-floating-box  */
+.right-floating-box {
+  position: absolute;
+  width: 300px;
+  background-color: rgb(246, 235, 214);
+  padding: 20px;
+  border-radius: 5px;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.right-floating-box .content {
+  display: inline;
+}
+.right-floating-box .learn-more {
+  display: inline-block;
+  font-weight: bold;
+}
+.right-floating-box .cookie-button {
+  background-color: black;
+  color: white;
+  padding: 8px;
+  padding-left: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.right-floating-box .decline {
+  margin-top: 15px;
+}
+
+/* center-floating-box  */
+.center-floating-box {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  width: calc(100% - 20px);
+  margin: 10px;
+}
+.center-floating-box .content {
+  display: inline;
+}
+.center-floating-box .btn-close {
+  float: right;
+  font-size: 1.4em;
+}
+/* left-floating-box */
+.left-floating-box {
+  width: 350px;
+  background-color: red;
+  height: 50px;
+  padding: 20px 15px;
+  border-radius: 11px;
+}
+.left-floating-box .content {
+  float: left;
+  max-width: 300px;
+}
+.left-floating-box .btn-close {
+  float: right;
+  text-align: center;
+  width: 50px;
+}
+.left-floating-box span.learn-more {
+  color: rgb(28, 145, 255);
+}
+/* show cookie */
+.showCookie {
+  display: none;
 }

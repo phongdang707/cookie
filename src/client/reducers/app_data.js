@@ -15,19 +15,61 @@ const app_data = (state: AppData = {}, action: Action): AppData => {
         app_plan: action.plan,
       };
     case "SWITCH_PAGE":
-      console.log("vao reducer");
-      console.log("action.page", action.page);
       return {
         ...state,
         page: action.page,
       };
     case "CHANGE_STYLE_SELECTED":
-      console.log("vao reducer");
-      console.log("actionáds", action);
       return {
         ...state,
         name: action.name,
       };
+    case "CHANGE_SIDEBARLEFT":
+      return {
+        ...state,
+        sidebaLeft: {
+          ...state.sidebaLeft,
+          showAll: action.sidebaLeft,
+        },
+      };
+    case "CHANGE_COMPLIANCE":
+      return {
+        ...state,
+        dataSetting: {
+          ...state.dataSetting,
+          content: {
+            ...state.dataSetting.content,
+            justTell: action.justTell,
+          },
+        },
+      };
+    case "CHANGE_CHILD_PAGE":
+      console.log("action", action);
+      let { name } = action;
+      if (name == "message") {
+        return {
+          ...state,
+          sidebaLeft: {
+            ...state.sidebaLeft,
+            message: action.value,
+          },
+        };
+      }
+    case "CHANGE_MESSAGE":
+      return {
+        ...state,
+        dataSetting: {
+          ...state.dataSetting,
+          content: {
+            ...state.dataSetting.content,
+            message: {
+              ...state.dataSetting.content.message,
+              content: action.message,
+            },
+          },
+        },
+      };
+
     default:
       return state;
   }

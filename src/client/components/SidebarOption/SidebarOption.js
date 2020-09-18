@@ -7,7 +7,7 @@ var classNames = require("classnames");
 export default function SidebarOption(props) {
   const name = useSelector((state) => state.app_data.name);
   const dispatch = useDispatch();
-  console.log("name", name);
+
   const [background, setBackground] = useState(props.data.classNameItem);
   useEffect(() => {
     if (name == props.data.item.name) {

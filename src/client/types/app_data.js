@@ -4,6 +4,7 @@ export type AppData = {
   +app_plan: string,
   +page: number,
   +name: string,
+  +sidebaLeft: boolean,
 };
 
 // App Data State
@@ -16,4 +17,5 @@ export type AppDataAction =
   | { type: "CHANGE_SHOP_PLAN", +plan: string }
   | { type: "CHANGE_APP_PLAN", +plan: string }
   | { type: "SWITCH_PAGE", +page: number }
-  | { type: "CHANGE_STYLE_SELECTED", +name: string };
+  | { type: "CHANGE_STYLE_SELECTED", +name: string }
+  | { type: "CHANGE_SIDEBARLEFT", +sidebaLeft: boolean };

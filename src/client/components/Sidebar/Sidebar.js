@@ -15,11 +15,12 @@ const arrStyle = [
   },
   {
     src:
-      "https://elfsight.com/assets/cookie-consent/templates/center-floating-box.jpg",
+      "https://elfsight.com/assets/cookie-consent/templates/right-floating-box.jpg",
     name: "Right Floating Box",
   },
   {
-    src: "https://elfsight.com/assets/cookie-consent/templates/top-banner.jpg",
+    src:
+      "https://elfsight.com/assets/cookie-consent/templates/center-floating-box.jpg",
     name: "Center Floating Box",
   },
 ];
@@ -37,20 +38,20 @@ export default function SidebarLeft() {
     main: "0%",
     transition: "all 1s ease 0s",
   };
-  const [sidebarOpen, setSidebarOpen] = useState(initStyle);
+  // const [sidebarOpen, setSidebarOpen] = useState(initStyle);
 
-  let open = () => {
-    setSidebarOpen({
-      mySidebarWidth: "30%",
-      main: "30%",
-      mySidebarDis: "block",
-      openNav: "none",
-      transition: initStyle.transition,
-    });
-  };
-  let close = () => {
-    setSidebarOpen(initStyle);
-  };
+  // let open = () => {
+  //   setSidebarOpen({
+  //     mySidebarWidth: "30%",
+  //     main: "30%",
+  //     mySidebarDis: "block",
+  //     openNav: "none",
+  //     transition: initStyle.transition,
+  //   });
+  // };
+  // let close = () => {
+  //   setSidebarOpen(initStyle);
+  // };
 
   const todoItems = arrStyle.map((item, index) => (
     <SidebarOption data={{ item, classNameItem }} key={index}></SidebarOption>
@@ -58,42 +59,40 @@ export default function SidebarLeft() {
 
   return (
     <div className="setting__background">
+      {/* siderbar */}
       <div
-        style={{
-          display: sidebarOpen.mySidebarDis,
-          width: sidebarOpen.mySidebarWidth,
-        }}
+        // style={{
+        //   display: sidebarOpen.mySidebarDis,
+        //   width: sidebarOpen.mySidebarWidth,
+        // }}
         id="mySidebar"
       >
         <h1>Select a template to start with</h1>
-        <div style={{ height: "400px", overflow: "auto" }}>{todoItems}</div>
-
-        <Button primary onClick={close}>
-          Close
-        </Button>
+        <div
+        // style={{ height: "400px", overflow: "auto" }}
+        >
+          {todoItems}
+        </div>
       </div>
+      {/* main */}
       <div
         id="main"
-        style={{
-          marginLeft: sidebarOpen.main,
-          transition: sidebarOpen.transition,
-        }}
+        // style={{
+        //   marginLeft: sidebarOpen.main,
+        //   transition: sidebarOpen.transition,
+        // }}
       >
-        <div>
-          <div
-            style={{
-              display: sidebarOpen.openNav,
-            }}
+        {/* <div
+            // style={{
+            //   display: sidebarOpen.openNav,
+            // }}
             id="openNav"
-            onClick={open}
+            // onClick={open}
           >
             <Icon backdrop={true} source={SettingsMajorMonotone} />
-          </div>
+          </div> */}
 
-          <div>
-            <SettingStylePage></SettingStylePage>
-          </div>
-        </div>
+        <SettingStylePage></SettingStylePage>
       </div>
     </div>
   );

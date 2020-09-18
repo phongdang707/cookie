@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Scrollable } from "@shopify/polaris";
 import SidebarExampleSidebar from "../Sidebar/Sidebar";
+import SidebarLeft from "../SidebarLeft/SidebarLeft";
+import SidebarRight from "../SidebarRight/SidebarRight";
 
 export default function SettingAdjust() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -10,9 +12,11 @@ export default function SettingAdjust() {
   };
   return (
     <div className="setting">
-      <div className="setting__cookie">
+      {/* <div className="setting__cookie">
         <SidebarExampleSidebar></SidebarExampleSidebar>
-      </div>
+      </div> */}
+      <SidebarLeft></SidebarLeft>
+      <SidebarRight></SidebarRight>
     </div>
   );
 }

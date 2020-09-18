@@ -5,6 +5,7 @@ const asyncBusboy = require("async-busboy");
 
 const AppStatus = require("../middlewares/app-status");
 const LoadAppSettings = require("../middlewares/load-app-settings");
+const loadingSettingData = require("../middlewares/loading-setting-data");
 
 /**
  * ROUTE FOR HANDLE APP STATUS================================================================
@@ -47,8 +48,9 @@ AdminApi.get("/load-app-settings", async (ctx) => {
   const _data = await LoadAppSettings({ shop, accessToken });
   ctx.body = _data;
 });
-AdminApi.post("/test1", bodyParser(), async (ctx) => {
-  console.log("123213");
+AdminApi.get("/getAllTheme", bodyParser(), async (ctx) => {
+  const _data = await loadingSettingData();
+  ctx.body = _data;
 });
 
 module.exports = AdminApi;
