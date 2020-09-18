@@ -6,8 +6,10 @@ import { useSelector } from "react-redux";
 
 export default function TopBanner() {
   const state = useSelector((state) => state.app_data.dataSetting);
+  console.log("state", state);
 
   const { justTell } = state.content;
+  const { message } = state.content.message.content;
 
   let button = () => {
     if (justTell == true) {
@@ -25,7 +27,7 @@ export default function TopBanner() {
   return (
     <div className="top-banner">
       <Cookie></Cookie>
-      <Content></Content>
+      <Content data={message}></Content>
       {button()}
     </div>
   );
